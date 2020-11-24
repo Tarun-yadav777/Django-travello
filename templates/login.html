@@ -9,36 +9,102 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Log-in</title>
+      <style>
+                      * {
+          box-sizing: border-box;
+          margin: 0;
+          padding-top: 3%;
+          background: #6E98F5;
+        }
+
+                  li{
+          background-color: #fff;
+          text-decoration: none;
+        }
+
+        ul{
+          list-style-type: none;
+          padding-left: 30%;
+          padding-bottom: 100px;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          border-radius:40px;
+        }
+                .third{
+          background-color: #fff;
+          border-radius:40px;
+        }
+
+
+                .second{
+          width: 700px;
+          height: 250px;
+          background: #fff;
+          border-radius: 40px;
+          box-shadow: 0 19px 38px rgba(128, 128, 128, 0.30), 0 15px 12px rgba(128, 128, 128, 0.22);
+        }
+                .first {
+          padding-left:25%;
+          align-items: center;
+          display: flex;
+          background-color: #6E98F5;
+        }
+                form{
+          background-color: #fff;
+        }
+        body{
+        background-color: #6E98F5;
+        }
+        h1{
+        background-color: #fff;
+        }
+        input{
+        background-color: #fff;
+        }
+        small{
+        background-color: #fff;
+        }
+                b{
+        background-color: #fff;
+        }
+      </style>
+
   </head>
   <body>
-   <form action="login" method="post">
-     {% csrf_token %}
-      <div class="col-sm-3 my-1">
-          <label class="sr-only" for="inlineFormInputGroupUsername">username</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text">@</div>
-            </div>
-            <input type="text" name="username" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+  <div class="first">
+      <div class="second">
+            <div class="third">
+              <ul>
+                   <form action="login" method="post">
+                     {% csrf_token %}
+                       <h1>Log-In</h1>
+                       <li>
+                                    <b>Username:-</b>
+                                    <input type="text" name="username" class="form-control"placeholder="Username">
+                          </li>
+
+                        <li>
+                            <b>Password:-</b>
+                                <input type="password" name="password" class="form-control" id="inputPassword6" placeholder="password">
+                                <small id="passwordHelpInline" class="text-muted">
+                                  Must be 8-20 characters long.
+                                </small>
+
+                            </li>
+
+                    <li> <input type="submit" class="btn btn-primary"></li>
+                        </form>
+                  </ul>
+                </div>
           </div>
+      </div>
 
-
-        <div class="form-group">
-            <label for="inputPassword6">Password</label>
-            <input type="password" name="password"  id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
-            <small id="passwordHelpInline" class="text-muted">
-              Must be 8-20 characters long.
-            </small>
-          </div>
-
-     <input type="submit">
-        </form>
-
-   <div>
-        {% for message in messages %}
-        <h2>{{message}}</h2>
-        {% endfor %}
-    </div>
+<!--   <div>-->
+<!--        {% for message in messages %}-->
+<!--        <h2>{{message}}</h2>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
